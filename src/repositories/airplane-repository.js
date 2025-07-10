@@ -1,8 +1,8 @@
 const CRUDRepository = require("../repositories/crud-repo");
-const Airplane = require("../models/airplane");
+const { Airplane } = require("../models"); // ✅ Correctly gets initialized model
 
-class AirplaneRepository extends CRUDRepository{
-    constructor(){
+class AirplaneRepository extends CRUDRepository {
+    constructor() {
         super(Airplane);
     }
 }
